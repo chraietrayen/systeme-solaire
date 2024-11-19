@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login </title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: url(images/black.jpg)no-repeat;
+        background-size: cover;
+        width: 100;
+        background-position: center;
+        animation: animateBg 5s linear infinite;
+        
+    }
+  
+     @keyframes animateBg{
+        100%{
+            filter:hue-rotate(360deg);
+        }
+         }
+    .login-container {
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 400px;
+        height: 500px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 5);
+        backdrop-filter:blur(15px); 
+
+    }
+    .login-container h2 {
+        position: relative; 
+        color: #45a049;
+        background-color: rgb(7, 247, 115); 
+        padding: 25px;
+        margin: 0;
+        width: 350px;
+        height: 120px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .login-form {
+        padding: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .form-group input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .form-group input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .remember-me {
+        display: inline-block;
+        margin-bottom: 10px;
+        color:white;
+    }
+    .register-link {
+        text-align: center;
+        font-size: 14px;
+        color: white;
+    }
+    .register-link a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form class="login-form" action="index.html" method="post">
+        <div class="form-group">
+            <a href="index.html"></a>
+        <input type="text" name="username" placeholder="Username" required>
+            
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="form-group remember-me">
+            <input type="checkbox" id="remember-me" name="remember-me">
+            <label for="remember-me">Remember Me</label>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+    <div class="register-link">
+        Don't have an account? <a href="registration.html">Register here</a>
+    </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c0f25;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #1d3557;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  a {
+    color: #a8dadc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .planet {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .planet img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  footer {
+    background-color: #1d3557;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

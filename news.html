@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronomy News - Solar System Explorer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0c0f25;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #1d3557;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    a {
+      color: #a8dadc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #1d3557;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .news-section {
+      animation: fadeIn 2s ease-in;
+    }
+
+    .news-section h2 {
+      font-size: 2.5em;
+      color: #f4a261;
+    }
+
+    .news-article {
+      background-color: #1d3557;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 800px;
+      text-align: left;
+      animation: slideIn 2s ease-out;
+    }
+
+    .news-article h3 {
+      color: #a8dadc;
+    }
+
+    .news-article p {
+      font-size: 1.1em;
+    }
+
+    .solar-system-image {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .solar-system-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .solar-system-image div {
+      position: absolute;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+
+    .planet-videos {
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    .planet-videos h3 {
+      color: #f4a261;
+      text-align: left;
+    }
+
+    .planet-videos video {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Astronomy News</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mercury.html">Mercury</a></li>
+        <li><a href="venus.html">Venus</a></li>
+        <li><a href="news.html">News</a></li>
+        <!-- Add more links as needed -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="news-section">
+      <h2>Latest News in Astronomy</h2>
+
+      <div class="solar-system-image">
+        <img src="images/system solar.jpg" alt="Solar System">
+        <div id="sun" style="top: 10%; left: 20%;">Sun</div>
+        <div id="mercury" style="top: 15%; left: 25%;">Mercury</div>
+        <div id="venus" style="top: 20%; left: 30%;">Venus</div>
+        <div id="earth" style="top: 25%; left: 35%;">Earth</div>
+        <div id="mars" style="top: 30%; left: 40%;">Mars</div>
+        <div id="jupiter" style="top: 35%; left: 45%;">Jupiter</div>
+        <div id="saturn" style="top: 40%; left: 50%;">Saturn</div>
+        <div id="uranus" style="top: 45%; left: 55%;">Uranus</div>
+        <div id="neptune" style="top: 50%; left: 60%;">Neptune</div>
+        <div id="pluto" style="top: 55%; left: 65%;">Pluto</div>
+      </div>
+
+      <div class="planet-videos">
+        <h3>Mercury</h3>
+        <video controls>
+          <source src="videos/Mercury - Planet of Extremes [4K UHD video].mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <h3>Venus</h3>
+        <video controls>
+          <source src="videos/Venus in a Minute.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <h3>Earth</h3>
+        <video controls>
+          <source src="videos/Earth 101  National Geographic.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <h3>Mars</h3>
+        <video controls>
+          <source src="videos/Mars in 4K The Ultimate Edition.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>uranus</h3>
+        <video controls>
+          <source src="videos/Uranus 101  National Geographic.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>jupiter</h3>
+        <video controls>
+          <source src="videos/Jupiter 101  National Geographic.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>saturn</h3>
+        <video controls>
+          <source src="videos/Saturn 101  National Geographic.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Neptune</h3>
+        <video controls>
+          <source src="videos/Neptune 101  National Geographic.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+

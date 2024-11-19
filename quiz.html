@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Solar System Explorer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0c0f25;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #1d3557;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    a {
+      color: #a8dadc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #1d3557;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .quiz-section {
+      background-color: #1d3557;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .quiz-section h2 {
+      font-size: 2.5em;
+      color: #f4a261;
+    }
+
+    .quiz-section p {
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+
+    .quiz-section input[type="radio"] {
+      margin: 5px;
+    }
+
+    .quiz-section button {
+      background-color: #f4a261;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .quiz-section button:hover {
+      background-color: #e76f51;
+    }
+
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Solar System Quiz</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="quiz-section">
+      <h2>Test Your Knowledge!</h2>
+      <form id="quiz-form">
+        <p>1. What is the closest planet to the Sun?</p>
+        <label><input type="radio" name="q1" value="Mercury"> Mercury</label><br>
+        <label><input type="radio" name="q1" value="Venus"> Venus</label><br>
+        <label><input type="radio" name="q1" value="Earth"> Earth</label><br>
+
+        <p>2. Which planet is known as the Red Planet?</p>
+        <label><input type="radio" name="q2" value="Mars"> Mars</label><br>
+        <label><input type="radio" name="q2" value="Jupiter"> Jupiter</label><br>
+        <label><input type="radio" name="q2" value="Saturn"> Saturn</label><br>
+
+        <p>3. Which planet has the most moons?</p>
+        <label><input type="radio" name="q3" value="Jupiter"> Jupiter</label><br>
+        <label><input type="radio" name="q3" value="Saturn"> Saturn</label><br>
+        <label><input type="radio" name="q3" value="Uranus"> Uranus</label><br>
+
+        <p>4. What is the largest planet in our solar system?</p>
+        <label><input type="radio" name="q4" value="Jupiter"> Jupiter</label><br>
+        <label><input type="radio" name="q4" value="Saturn"> Saturn</label><br>
+        <label><input type="radio" name="q4" value="Neptune"> Neptune</label><br>
+
+        <p>5. Which planet is known for its prominent ring system?</p>
+        <label><input type="radio" name="q5" value="Saturn"> Saturn</label><br>
+        <label><input type="radio" name="q5" value="Uranus"> Uranus</label><br>
+        <label><input type="radio" name="q5" value="Neptune"> Neptune</label><br><br>
+
+        <button type="button" onclick="submitQuiz()">Finish Quiz</button>
+      </form>
+      <div id="quiz-results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Solar System Explorer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

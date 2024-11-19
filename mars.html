@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars - Solar System Explorer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0c0f25;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #1d3557;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    a {
+      color: #a8dadc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #1d3557;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .planet-details {
+      text-align: center;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .planet-details img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #a8dadc;
+      animation: rotate 20s infinite linear, move 5s infinite alternate ease-in-out;
+    }
+
+    .planet-details h2 {
+      margin-top: 20px;
+      font-size: 2em;
+      color: #f4a261;
+      animation: slideIn 2s ease-out;
+    }
+
+    .planet-details p {
+      font-size: 1.2em;
+      margin: 20px 0;
+      animation: slideIn 2s ease-out;
+    }
+
+    .planet-details ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 1.1em;
+      animation: slideIn 2s ease-out;
+    }
+
+    .planet-details li {
+      margin: 10px 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes move {
+      from { transform: translateX(0); }
+      to { transform: translateX(100px); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-30px); }
+      60% { transform: translateY(-15px); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mars</h1>
+    <nav>
+    </nav>
+  </header>
+
+  <main>
+    <section class="planet-details">
+      <img src="images/mars.jpg" alt="Mars">
+      <h2>Mars</h2>
+      <p>Mars is the fourth planet from the Sun and is often referred to as the Red Planet due to its reddish appearance. Mars has a thin atmosphere composed mostly of carbon dioxide, and it has surface features both of a dry desert and polar ice caps. Mars is home to the tallest volcano and the deepest canyon in the solar system.</p>
+      <ul>
+        <li>Diameter: 6,779 km</li>
+        <li>Distance from Sun: 227.9 million km</li>
+        <li>Orbital Period: 687 days</li>
+        <li>Moons: 2 (Phobos and Deimos)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Solar System Explorer</p>
+  </footer>
+</body>
+</html>

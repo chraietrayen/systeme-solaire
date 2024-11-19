@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planets - Solar System Explorer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0c0f25;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+    }
+
+    header {
+      background-color: #1d3557;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 100%;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    a {
+      color: #a8dadc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #1d3557;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      height: 100vh;
+      overflow-y: auto;
+      animation: slideInLeft 2s ease-in-out;
+    }
+
+    .main-content {
+      width: 80%;
+      padding: 20px;
+    }
+
+    .planet-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .planet-item {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .planet-item img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .planet-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .planet-item p {
+      margin-top: 10px;
+      color: #f4a261;
+    }
+
+    @keyframes slideInLeft {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Solar System Explorer</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="sidebar">
+    <h2>Planets Information</h2>
+    <p>Click on any planet to learn more about it.</p>
+    <ul>
+      <li><a href="mercury.html">Mercury</a></li>
+      <li><a href="venus.html">Venus</a></li>
+      <li><a href="terre.html">Earth</a></li>
+      <li><a href="mars.html">Mars</a></li>
+      <li><a href="juptier.html">Jupiter</a></li>
+      <li><a href="saturne.html">Saturn</a></li>
+      <li><a href="uranus.html">Uranus</a></li>
+      <li><a href="neptune.html">Neptune</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <section class="planet-list">
+      <div class="planet-item">
+        <a href="mercury.html">
+          <img src="images/mercus.jpg" alt="Mercury">
+          <p>Mercury</p>
+        </a>
+      </div>
+      <div class="planet-item">
+        <a href="venus.html">
+          <img src="images/venus.jpg" alt="Venus">
+          <p>Venus</p>
+        </a>
+      </div>
+      <div class="planet-item">
+        <a href="terre.html">
+          <img src="images/terre.jpg" alt="Earth">
+          <p>Earth</p>
+        </a>
+      </div>
+      <div class="planet-item">
+        <a href="mars.html">
+          <img src="images/mars.jpg" alt="Mars">
+          <p>Mars</p>
+        </a>
+      </div>
+      <div class="planet-item">
+        <a href="juptier.html">
+          <img src="images/juptier.jpg" alt="Jupiter">
+          <p>Jupiter</p>
+        </a>
+      </div>
+      <div class="planet-item">
+        <a href="saturne.html">
+          <img src="images/Saturn_during_Equinox.jpg" alt="Saturn">
+          <p>Saturn</p>
+        </a>
+      </div>
+      <div class="planet-item">
+        <a href="uranus.html">
+          <img src="images/uranus.jpg" alt="Uranus">
+          <p>Uranus</p>
+        </a>
+      </div>
+      <div class="planet-item">
+        <a href="neptune.html">
+          <img src="images/neptune.jpg" alt="Neptune">
+          <p>Neptune</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Solar System Explorer</p>
+  </footer>
+</body>
+</html>
