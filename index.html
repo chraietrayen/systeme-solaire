@@ -1,89 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solar System Explorer</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <nav>
+    <ul>
+      <li><a href="planets.html">Planets</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  <h1>Solar System Explorer</h1>
+  <section id="news">
+    <div id="news-content">
+      <a href="news.html"><button>Read More about the Solar System</button></a>
+    </div>
+  </section>
+  <div class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="videos/back2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   <header>
-    <h1>Solar System Explorer</h1>
-    <nav>
-      <ul>
-        <li><a href="planets.html">Planets</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="news.html">News</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <section id="user-info-section"> <h2>User Information</h2> <p id="user-info"></p> </section>
-    <section id="planets">
-      <h2>Explore the Planets</h2>
-      <div class="planet">
-        <a href="mercury.html">
-          <img src="images/mercus.jpg" alt="Mercury">
-          <p>Mercury</p>
-        </a>
-      </div>
-      <div class="planet">
-        <a href="venus.html">
-          <img src="images/venus.jpg" alt="Venus">
-          <p>Venus</p>
-        </a>
-      </div>
-      <div class="planet">
-        <a href="uranus.html">
-          <img src="images/uranus.jpg" alt="Uranus">
-          <p>Uranus</p>
-        </a>
-      </div>
-      <div class="planet">
-        <a href="saturn.html">
-          <img src="images/Saturn_during_Equinox.jpg" alt="Saturn">
-          <p>Saturn</p>
-        </a>
-      </div>
-      <div class="planet">
-        <a href="neptune.html">
-          <img src="images/neptune.jpg" alt="Neptune">
-          <p>Neptune</p>
-        </a>
-      </div>
-      <div class="planet">
-        <a href="mars.html">
-          <img src="images/mars.jpg" alt="Mars">
-          <p>Mars</p>
-        </a>
-      </div>
-      <div class="planet">
-        <a href="jupiter.html">
-          <img src="images/juptier.jpg" alt="Jupiter">
-          <p>Jupiter</p>
-        </a>
-      </div>
-      <div class="planet">
-        <a href="terre.html">
-          <img src="images/terre.jpg" alt="Earth">
-          <p>Earth</p>
-        </a>
-      </div>
-    </section>
-
-    <section id="quiz"> 
-        <h2>Quiz</h2> 
-        <b><p>Test your knowledge about the solar system.</p></b> 
-        <a href="quiz.html"><button>Start Quiz</button></a>
-     </section>
-
-    <section id="news">
-      <h2>Astronomy News</h2>
-      <div id="news-content">
-        <a href="news.html"><button>Read More about the Solar System</button></a>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -93,4 +41,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
