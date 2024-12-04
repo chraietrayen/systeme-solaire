@@ -9,6 +9,29 @@
 </head>
 
 <body>
+  <div class="audio-container">
+    <!-- L'audio ne doit être chargé que si la musique n'est pas déjà lancée -->
+    <audio id="background-music" loop autoplay>
+      <source src="audio/back3.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+
+    </audio>
+    <button id="mute-button">🔊</button>
+  </div>
+  <script>
+    const audioElement = document.getElementById('background-music');
+    const muteButton = document.getElementById('mute-button');
+   // Gestion du bouton mute
+muteButton.addEventListener('click', () => {
+  if (audioElement.muted) {
+    audioElement.muted = false;
+    muteButton.textContent = '🔊'; // Icône pour son activé
+  } else {
+    audioElement.muted = true;
+    muteButton.textContent = '🔇'; // Icône pour son coupé
+  }
+});
+</script>
   <nav>
     <ul>
       <li><a href="planets.html">Planets</a></li>
@@ -20,7 +43,7 @@
   <h1>Solar System Explorer</h1>
   <section id="news">
     <div id="news-content">
-      <a href="news.html"><button>Read More about the Solar System</button></a>
+      <a href="news.html"><button>Read More about the Solar System Explorer</button></a>
     </div>
   </section>
   <div class="video-container">
@@ -29,6 +52,7 @@
       Your browser does not support the video tag.
     </video>
 
+<<<<<<< HEAD
     <div class="audio-container">
       <!-- L'audio ne doit être chargé que si la musique n'est pas déjà lancée -->
       <audio id="background-music" loop autoplay>
@@ -58,6 +82,9 @@
         }
       });
     </script>
+=======
+    
+>>>>>>> 229b3c34b368ed4eff9f8ac9feff5df842d4ca81
   </div>
 
   <header></header>
