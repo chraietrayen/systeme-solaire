@@ -4,11 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz - Solar System Explorer</title>
-  <!-- Dans le fichier index.html ou toute autre page -->
-<!-- Ajoute cette ligne dans chaque page -->
-<iframe src="index.html" style="display:none;"></iframe>
-
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,6 +19,9 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav ul {
@@ -56,7 +54,7 @@
       background-color: #1d3557;
       text-align: center;
       padding: 10px;
-      position: fixed;
+      position: sticky;
       bottom: 0;
       width: 100%;
     }
@@ -76,12 +74,20 @@
       color: #f4a261;
     }
 
-    .quiz-section p {
+    .quiz-section .card {
+      background-color: #457b9d;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .quiz-section .card p {
       font-size: 1.2em;
       margin: 15px 0;
     }
 
-    .quiz-section input[type="radio"] {
+    .quiz-section .card input[type="radio"] {
       margin: 5px;
     }
 
@@ -128,30 +134,40 @@
     <section class="quiz-section">
       <h2>Test Your Knowledge!</h2>
       <form id="quiz-form">
-        <p>1. What is the closest planet to the Sun?</p>
-        <label><input type="radio" name="q1" value="Mercury"> Mercury</label><br>
-        <label><input type="radio" name="q1" value="Venus"> Venus</label><br>
-        <label><input type="radio" name="q1" value="Earth"> Earth</label><br>
+        <div class="card">
+          <p>1. What is the closest planet to the Sun?</p>
+          <label><input type="radio" name="q1" value="Mercury"> Mercury</label><br>
+          <label><input type="radio" name="q1" value="Venus"> Venus</label><br>
+          <label><input type="radio" name="q1" value="Earth"> Earth</label><br>
+        </div>
 
-        <p>2. Which planet is known as the Red Planet?</p>
-        <label><input type="radio" name="q2" value="Mars"> Mars</label><br>
-        <label><input type="radio" name="q2" value="Jupiter"> Jupiter</label><br>
-        <label><input type="radio" name="q2" value="Saturn"> Saturn</label><br>
+        <div class="card">
+          <p>2. Which planet is known as the Red Planet?</p>
+          <label><input type="radio" name="q2" value="Mars"> Mars</label><br>
+          <label><input type="radio" name="q2" value="Jupiter"> Jupiter</label><br>
+          <label><input type="radio" name="q2" value="Saturn"> Saturn</label><br>
+        </div>
 
-        <p>3. Which planet has the most moons?</p>
-        <label><input type="radio" name="q3" value="Jupiter"> Jupiter</label><br>
-        <label><input type="radio" name="q3" value="Saturn"> Saturn</label><br>
-        <label><input type="radio" name="q3" value="Uranus"> Uranus</label><br>
+        <div class="card">
+          <p>3. Which planet has the most moons?</p>
+          <label><input type="radio" name="q3" value="Jupiter"> Jupiter</label><br>
+          <label><input type="radio" name="q3" value="Saturn"> Saturn</label><br>
+          <label><input type="radio" name="q3" value="Uranus"> Uranus</label><br>
+        </div>
 
-        <p>4. What is the largest planet in our solar system?</p>
-        <label><input type="radio" name="q4" value="Jupiter"> Jupiter</label><br>
-        <label><input type="radio" name="q4" value="Saturn"> Saturn</label><br>
-        <label><input type="radio" name="q4" value="Neptune"> Neptune</label><br>
+        <div class="card">
+          <p>4. What is the largest planet in our solar system?</p>
+          <label><input type="radio" name="q4" value="Jupiter"> Jupiter</label><br>
+          <label><input type="radio" name="q4" value="Saturn"> Saturn</label><br>
+          <label><input type="radio" name="q4" value="Neptune"> Neptune</label><br>
+        </div>
 
-        <p>5. Which planet is known for its prominent ring system?</p>
-        <label><input type="radio" name="q5" value="Saturn"> Saturn</label><br>
-        <label><input type="radio" name="q5" value="Uranus"> Uranus</label><br>
-        <label><input type="radio" name="q5" value="Neptune"> Neptune</label><br><br>
+        <div class="card">
+          <p>5. Which planet is known for its prominent ring system?</p>
+          <label><input type="radio" name="q5" value="Saturn"> Saturn</label><br>
+          <label><input type="radio" name="q5" value="Uranus"> Uranus</label><br>
+          <label><input type="radio" name="q5" value="Neptune"> Neptune</label><br>
+        </div>
 
         <button type="button" onclick="submitQuiz()">Finish Quiz</button>
       </form>
@@ -163,6 +179,10 @@
     <p>&copy; 2024 Solar System Explorer</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function submitQuiz() {
+      // Your quiz logic here
+    }
+  </script>
 </body>
 </html>
