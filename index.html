@@ -9,6 +9,29 @@
 </head>
 
 <body>
+  <div class="audio-container">
+    <!-- L'audio ne doit être chargé que si la musique n'est pas déjà lancée -->
+    <audio id="background-music" loop autoplay>
+      <source src="audio/back3.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+
+    </audio>
+    <button id="mute-button">🔊</button>
+  </div>
+  <script>
+    const audioElement = document.getElementById('background-music');
+    const muteButton = document.getElementById('mute-button');
+   // Gestion du bouton mute
+muteButton.addEventListener('click', () => {
+  if (audioElement.muted) {
+    audioElement.muted = false;
+    muteButton.textContent = '🔊'; // Icône pour son activé
+  } else {
+    audioElement.muted = true;
+    muteButton.textContent = '🔇'; // Icône pour son coupé
+  }
+});
+</script>
   <nav>
     <ul>
       <li><a href="planets.html">Planets</a></li>
@@ -29,35 +52,7 @@
       Your browser does not support the video tag.
     </video>
 
-    <div class="audio-container">
-      <!-- L'audio ne doit être chargé que si la musique n'est pas déjà lancée -->
-      <audio id="background-music" loop autoplay>
-        <source src="audio/back3.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-
-      </audio>
-      <button id="mute-button">🔊</button>
-    </div>
-
-    <script>
-      // Si la musique n'a pas été lancée, redirige vers la page de lecture de la musique
-      if (!localStorage.getItem('musicPlaying')) {
-        window.location.href = 'index.html'; 
-      }
-
-      const music = document.getElementById('background-music');
-      const muteButton = document.getElementById('mute-button');
-
-      muteButton.addEventListener('click', () => {
-        if (music.muted) {
-          music.muted = false;
-          muteButton.textContent = '🔊'; // Icône pour son activé
-        } else {
-          music.muted = true;
-          muteButton.textContent = '🔇'; // Icône pour son coupé
-        }
-      });
-    </script>
+    
   </div>
 
   <header></header>
