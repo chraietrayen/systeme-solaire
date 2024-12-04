@@ -40,10 +40,11 @@ muteButton.addEventListener('click', () => {
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
-  <h1>Solar System Explorer</h1>
+  <h1>Solar System Exploration</h1>
+ 
   <section id="news">
     <div id="news-content">
-      <a href="news.html"><button>Read More about the Solar System Explorer</button></a>
+      <a href="news.html"><button>Read More about the Solar System Exploration</button></a>
     </div>
   </section>
   <div class="video-container">
@@ -52,39 +53,7 @@ muteButton.addEventListener('click', () => {
       Your browser does not support the video tag.
     </video>
 
-<<<<<<< HEAD
-    <div class="audio-container">
-      <!-- L'audio ne doit être chargé que si la musique n'est pas déjà lancée -->
-      <audio id="background-music" loop autoplay>
-        <source src="audio/Dorian Marko - Cornfield Chase (Interstellar Piano Cover).mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-
-      </audio>
-      <button id="mute-button">🔊</button>
-    </div>
-
-    <script>
-      // Si la musique n'a pas été lancée, redirige vers la page de lecture de la musique
-      if (!localStorage.getItem('musicPlaying')) {
-        window.location.href = 'index.html'; 
-      }
-
-      const music = document.getElementById('background-music');
-      const muteButton = document.getElementById('mute-button');
-
-      muteButton.addEventListener('click', () => {
-        if (music.muted) {
-          music.muted = false;
-          muteButton.textContent = '🔊'; // Icône pour son activé
-        } else {
-          music.muted = true;
-          muteButton.textContent = '🔇'; // Icône pour son coupé
-        }
-      });
-    </script>
-=======
     
->>>>>>> 229b3c34b368ed4eff9f8ac9feff5df842d4ca81
   </div>
 
   <header></header>
