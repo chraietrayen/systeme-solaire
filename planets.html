@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planets - Solar System Explorer</title>
-  <!-- Dans le fichier index.html ou toute autre page -->
-<!-- Ajoute cette ligne dans chaque page -->
-<iframe src="index.html" style="display:none;"></iframe>
-
+  
+  <!-- Inclusion d'un iframe caché pour le préchargement de la page index -->
+  <iframe src="index.html" style="display:none;"></iframe>
 
   <style>
+    /* Styles globaux pour la mise en page */
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
@@ -57,11 +57,13 @@
       text-decoration: underline;
     }
 
+    /* Conteneur principal */
     .container {
       display: flex;
       flex: 1;
     }
 
+    /* Barre latérale */
     .sidebar {
       width: 20%;
       background: linear-gradient(to bottom, #1d3557, #264653);
@@ -102,6 +104,7 @@
       color: #f4a261;
     }
 
+    /* Contenu principal */
     .main-content {
       width: 80%;
       padding: 20px;
@@ -164,6 +167,7 @@
       <h2>Planets Information</h2>
       <p>Click on any planet to learn more about it.</p>
       <ul>
+        <!-- Listes des liens vers les pages des planètes avec images -->
         <li><img src="images/mercus.jpg" alt="Mercury"><a href="mercury.html">Mercury</a></li>
         <li><img src="images/venus.jpg" alt="Venus"><a href="venus.html">Venus</a></li>
         <li><img src="images/terre.jpg" alt="Earth"><a href="terre.html">Earth</a></li>
@@ -177,6 +181,7 @@
 
     <div class="main-content">
       <section class="planet-list">
+        <!-- Sections des planètes avec images et liens -->
         <div class="planet-item"><a href="mercury.html"><img src="images/mercus.jpg" alt="Mercury"><p>Mercury</p></a></div>
         <div class="planet-item"><a href="venus.html"><img src="images/venus.jpg" alt="Venus"><p>Venus</p></a></div>
         <div class="planet-item"><a href="terre.html"><img src="images/terre.jpg" alt="Earth"><p>Earth</p></a></div>
