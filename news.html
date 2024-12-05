@@ -129,7 +129,19 @@
       margin-bottom: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
-
+    footer {
+  background-color: rgba(29, 53, 87, 0.9);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Ajouté pour éviter tout décalage */
+  width: 100%; /* S'assure que le footer occupe toute la largeur */
+  box-sizing: border-box; /* Évite tout dépassement dû au padding */
+}
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -228,6 +240,9 @@
           <source src="videos/Neptune 101  National Geographic.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <footer>
+          <p>&copy; 2024 Solar System Explorer</p>
+        </footer>
         
          
 
