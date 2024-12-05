@@ -1,11 +1,14 @@
 // Contient les réponses correctes
-const correctAnswers = ['Mercury', 'Mars', 'Jupiter', 'Jupiter', 'Saturn'];
+const correctAnswers = [
+  'Mercury', 'Mars', 'Jupiter', 'Jupiter', 'Saturn', 
+  'Jupiter', 'Venus', 'Venus', 'Mars', 'Venus'
+];
 
 function submitQuiz() {
   const form = document.getElementById('quiz-form');
   const results = document.getElementById('quiz-results');
   let score = 0;
-  const totalQuestions = 5;
+  const totalQuestions = 10;
 
   // Réinitialiser les classes
   const resetClasses = () => {
