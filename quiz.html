@@ -12,7 +12,6 @@
       background-color: #0c0f25;
       color: #fff;
       overflow-x: hidden;
-      
     }
 
     header {
@@ -119,7 +118,6 @@
   </style>
 </head>
 <body>
- 
   <header>
     <h1>Solar System Quiz</h1>
     <nav>
@@ -136,6 +134,7 @@
     <section class="quiz-section">
       <h2>Test Your Knowledge!</h2>
       <form id="quiz-form">
+        <!-- Existing Questions -->
         <div class="card">
           <p>1. What is the closest planet to the Sun?</p>
           <label><input type="radio" name="q1" value="Mercury"> Mercury</label><br>
@@ -169,6 +168,42 @@
           <label><input type="radio" name="q5" value="Saturn"> Saturn</label><br>
           <label><input type="radio" name="q5" value="Uranus"> Uranus</label><br>
           <label><input type="radio" name="q5" value="Neptune"> Neptune</label><br>
+        </div>
+
+        <!-- New Questions -->
+        <div class="card">
+          <p>6. Which planet is known for its Great Red Spot?</p>
+          <label><input type="radio" name="q6" value="Jupiter"> Jupiter</label><br>
+          <label><input type="radio" name="q6" value="Mars"> Mars</label><br>
+          <label><input type="radio" name="q6" value="Neptune"> Neptune</label><br>
+        </div>
+
+        <div class="card">
+          <p>7. Which planet is the hottest in the solar system?</p>
+          <label><input type="radio" name="q7" value="Mercury"> Mercury</label><br>
+          <label><input type="radio" name="q7" value="Venus"> Venus</label><br>
+          <label><input type="radio" name="q7" value="Mars"> Mars</label><br>
+        </div>
+
+        <div class="card">
+          <p>8. Which planet is known as the Morning Star or the Evening Star?</p>
+          <label><input type="radio" name="q8" value="Mercury"> Mercury</label><br>
+          <label><input type="radio" name="q8" value="Venus"> Venus</label><br>
+          <label><input type="radio" name="q8" value="Mars"> Mars</label><br>
+        </div>
+
+        <div class="card">
+          <p>9. What is the name of the second smallest planet in our solar system?</p>
+          <label><input type="radio" name="q9" value="Mercury"> Mercury</label><br>
+          <label><input type="radio" name="q9" value="Mars"> Mars</label><br>
+          <label><input type="radio" name="q9" value="Venus"> Venus</label><br>
+        </div>
+
+        <div class="card">
+          <p>10. Which planet has a day that is longer than its year?</p>
+          <label><input type="radio" name="q10" value="Mercury"> Mercury</label><br>
+          <label><input type="radio" name="q10" value="Venus"> Venus</label><br>
+          <label><input type="radio" name="q10" value="Mars"> Mars</label><br>
         </div>
 
         <button type="button" onclick="submitQuiz()">Finish Quiz</button>
