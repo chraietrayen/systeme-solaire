@@ -13,7 +13,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden; /* Prevents scrolling */
+            overflow: hidden;
         }
         video.background-video {
             position: absolute;
@@ -21,8 +21,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures video covers the entire screen */
-            z-index: -1; /* Places the video behind other content */
+            object-fit: cover;
+            z-index: -1;
         }
         .overlay {
             position: absolute;
@@ -30,7 +30,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Add a transparent overlay for better readability */
+            background-color: rgba(0, 0, 0, 0.5);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,7 +42,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Place la vidéo derrière le contenu */
+            z-index: -1;
         }
         .registration-container {
             background-color: #ffffff;
@@ -50,7 +50,7 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 400px;
-            height: 600px;
+            height: 650px;
             backdrop-filter: blur(15px);
             padding: 20px;
             position: relative;
@@ -74,7 +74,8 @@
         .form-group input[type="text"],
         .form-group input[type="password"],
         .form-group input[type="tel"],
-        .form-group input[type="date"] {
+        .form-group input[type="date"],
+        .form-group input[type="email"] {
             width: calc(100% - 40px);
             padding: 10px;
             border: 1px solid #ccc;
@@ -115,12 +116,35 @@
         <source src="videos/video1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-<div class="registration-container">
-    <h2>Register</h2>
-    <form class="registration-form" id="registration-form" onsubmit="handleRegister(event)">
-        <div class="form-group">
-            <span class="icon">👤</span>
-            <input type="text" id="username" name="username" placeholder="Username" required>
+    <div class="registration-container">
+        <h2>Register</h2>
+        <form class="registration-form" id="registration-form" onsubmit="handleRegister(event)">
+            <div class="form-group">
+                <span class="icon">👤</span>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <span class="icon">📞</span>
+                <input type="tel" id="telephone" name="telephone" placeholder="Telephone" required>
+            </div>
+            <div class="form-group">
+                <span class="icon">📅</span>
+                <input type="date" id="date_naissance" name="date_naissance" placeholder="Date of Birth" required>
+            </div>
+            <div class="form-group">
+                <span class="icon">📧</span>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
         </div>
     </div>
 
@@ -134,9 +158,10 @@
             const password = document.getElementById('password').value;
             const telephone = document.getElementById('telephone').value;
             const dateNaissance = document.getElementById('date_naissance').value;
+            const email = document.getElementById('email').value;
 
             // Save user data to local storage
-            const user = { username, password, telephone, dateNaissance };
+            const user = { username, password, telephone, dateNaissance, email };
             localStorage.setItem(username, JSON.stringify(user));
 
             alert('Registration successful!');
